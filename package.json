@@ -6,6 +6,9 @@
   "author": "Sebastian Walker",
   "license": "MIT",
   "private": false,
+  "scripts" : {
+    "start" : "node ./server/index.js"
+  },
   "dependencies": {
     "bulma-dist": "^1.0.0",
     "express": "^4.17.1",
