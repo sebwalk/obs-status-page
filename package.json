@@ -1,0 +1,17 @@
+{
+  "name": "obs-status-page",
+  "version": "1.0.0",
+  "description": "A status page for OBS displaying a timer to the talent",
+  "main": "server/index.js",
+  "author": "Sebastian Walker",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "bulma-dist": "^1.0.0",
+    "express": "^4.17.1",
+    "ip": "^1.1.5",
+    "obs-websocket-js": "^4.0.1",
+    "path": "^0.12.7",
+    "vue": "^2.6.11"
+  }
+}

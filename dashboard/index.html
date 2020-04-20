@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OBS Status Page</title>
+    <link rel="stylesheet" href="../node_modules/bulma-dist/css/bulma.css">
+    <style>
+        .title {
+            font-size: 8em !important;
+        }
+
+        .tag {
+            font-size: 2em !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <section class="hero is-dark is-fullheight">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-vcentered">
+                        <div class="column">
+                            <h1 class="title is-1" v-text="timer"></h1>
+                        </div>
+                        <div class="column has-text-right is-narrow">
+                            <div class="tag is-light is-large" v-if="mode === 'disconnected'">
+                                CONNECTION LOST
+                            </div>
+                            <div class="tag is-light is-large" v-if="mode === 'standby'">
+                                STANDBY
+                            </div>
+                            <span class="tag is-danger is-large" v-if="mode === 'recording'">
+                                REC
+                            </span>
+                            <span class="tag is-danger is-large" v-if="mode === 'streaming'">
+                                ON AIR
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="./dashboard/dashboard.js"></script>
+</html>
