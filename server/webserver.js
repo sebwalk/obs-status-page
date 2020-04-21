@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const config = require('../config');
+const config = require('./config');
 const ip = require("ip");
 
 const webserver = {

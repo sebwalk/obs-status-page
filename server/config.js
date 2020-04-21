@@ -1,16 +1,13 @@
 module.exports =  {
-
     obs: {
         host: 'localhost',
         port: 4444,
-        password: 'abcdefghijklmnop'
+        password: '123456'
     },
-
-    socket: {
-        port: 4441
+    api: {
+        port: 3333
     },
-
     dashboard: {
-        port: 4442
+        port: 8080
     }
 };

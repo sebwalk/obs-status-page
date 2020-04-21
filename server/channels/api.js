@@ -1,4 +1,4 @@
-const Channel = require('../../bus/channel');
+const Channel = require('channel-bus').Channel;
 const WebSocket = require('ws');
 
 class ApiChannel extends Channel {

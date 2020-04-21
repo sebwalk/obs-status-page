@@ -1,4 +1,4 @@
-const Channel = require('../../bus/channel');
+const Channel = require('channel-bus').Channel;
 const ObsSocket = require('obs-websocket-js');
 
 class ObsChannel extends Channel {
