@@ -9,13 +9,13 @@ const app = new Vue({
             if(this.state === null){
                 return 'disconnected';
             }
-            if(this.state.status === 'disconnected'){
+            if( ! this.state.obs.connected){
                 return 'disconnected';
             }
-            if(this.state.stream.active){
+            if(this.state.obs.stream.active){
                 return 'streaming';
             }
-            if(this.state.record.active){
+            if(this.state.obs.record.active){
                 return 'recording';
             }
             return 'standby';
@@ -27,9 +27,9 @@ const app = new Vue({
 
             switch(this.mode){
                 case 'streaming':
-                    return this.state.stream.time;
+                    return this.state.obs.stream.time;
                 case 'recording':
-                    return this.state.record.time;
+                    return this.state.obs.record.time;
                 default:
                     return 0;
             }
@@ -49,7 +49,7 @@ const app = new Vue({
         }
     },
     created(){
-        this.ws = new WebSocket("ws://"+window.location.hostname+":4441");
+        this.ws = new WebSocket("ws://"+window.location.hostname+":3333");
 
         this.ws.onmessage = msg => {
             this.state = JSON.parse(msg.data);

@@ -4,8 +4,8 @@ const app = express();
 const config = require('../config');
 const ip = require("ip");
 
-const dashboardSpaServer = {
-    init(){
+const webserver = {
+    start(){
         app.use(express.static(__dirname + '/../'));
 
         app.get('*', function (request, response) {
@@ -18,4 +18,4 @@ const dashboardSpaServer = {
     }
 };
 
-module.exports = dashboardSpaServer;
+module.exports = webserver;
